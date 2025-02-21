@@ -10,16 +10,13 @@ private:
     int year;
 
 public:
-    // Конструктор за замовчуванням
+
     Car() : brand("Unknown"), model("Unknown"), year(0) {}
-    
-    // Конструктор з параметрами
+
     Car(string b, string m, int y) : brand(b), model(m), year(y) {}
     
-    // Перевантажений конструктор
     Car(string b) : Car(b, "Default Model", 2020) {}
     
-    // Деструктор
     ~Car() {
         cout << "Car " << brand << " " << model << " destroyed." << endl;
     }
@@ -36,10 +33,9 @@ private:
     string fuelType;
 
 public:
-    // Конструктор
+
     Engine(int hp = 100, double v = 1.6, string f = "Petrol") : horsepower(hp), volume(v), fuelType(f) {}
     
-    // Деструктор
     ~Engine() {
         cout << "Engine with " << horsepower << " HP destroyed." << endl;
     }
@@ -55,10 +51,9 @@ private:
     int age;
 
 public:
-    // Конструктор
+
     Owner(string n = "Unknown", int a = 18) : name(n), age(a) {}
     
-    // Деструктор
     ~Owner() {
         cout << "Owner " << name << " deleted." << endl;
     }
